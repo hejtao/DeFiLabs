@@ -23,7 +23,7 @@ contract ContractTest is Test {
 
     address here = address(this);
     vm.startPrank(0x218B95BE3ed99141b0144Dba6cE88807c4AD7C09);
-    WBTC.transfer(here, 1*(10**WBTC.decimals())); // transfer 1 BTC to self-contract
+    WBTC.transfer(here, 1*(10**WBTC.decimals())); // transfer 1 BTC from prank to self-contract
     vm.stopPrank();
   }
  
